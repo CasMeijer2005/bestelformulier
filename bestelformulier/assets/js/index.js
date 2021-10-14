@@ -1,123 +1,149 @@
 function verstuur(){
-    // var aanhef = docuemnt.getElementById("aflever_aanhef").value;
-    var voornaam = document.getElementById("aflever_voornaam").value;   
-    var achternaam = document.getElementById("aflever_achternaam").value;
-    var straat = document.getElementById("aflever_straat").value;
-    var huisnummer = document.getElementById("aflever_huisnummer").value;
-    var bedrijf = document.getElementById("aflever_bedrijf").value;
-    var postcode = document.getElementById("aflever_postcode").value;
-    var plaats = document.getElementById("aflever_woonplaats").value;
-    // var land = document.getElementById("aflever_land").value;
-    var emailadres = document.getElementById("email").value;
-    var telefoon = document.getElementById("telefoon").value;
-    var algvw = document.getElementById("algvw")
-
-    var facatuureadres 
+    var aanhef = document.getElementById("aflever_aanhef");
+    var voornaam = document.getElementById("aflever_voornaam");   
+    var achternaam = document.getElementById("aflever_achternaam");
+    var straat = document.getElementById("aflever_straat");
+    var huisnummer = document.getElementById("aflever_huisnummer");
+    var bedrijf = document.getElementById("aflever_bedrijf");
+    var postcode = document.getElementById("aflever_postcode");
+    var plaats = document.getElementById("aflever_woonplaats");
+    var land = document.getElementById("aflever_land");
+    var emailadres = document.getElementById("email");
+    var telefoon = document.getElementById("telefoon");
+    var algvw = document.getElementById("algvw");
     
-    var returnWaarde= false;
+    var returnWaarde= true;
 
-    document.getElementById("form-error").innerHTML = ""
+    //var ander_facatuureadres = document.getElementById("facatuuradres_ja").checked;
 
-    // if(aanhef != "Aanhef"){
-    //     returnWaarde = true;
-    // } else {
-    //     document.getElementById("aflever_aanhef").style.border= "1px solid red";
-    //     document.getElementById("form-error").innerHTML += "<br>Aanhef is niet ingevuld"
-    //     returnwaarde = false;
-    // }
+    document.getElementById("form-error").innerHTML = "";
 
-    if(voornaam != ""){
-        returnWaarde = true;
+    if(aanhef.value == ""){
+        document.getElementById("aflever_aanhef").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Aanhef is niet ingevuld";
+        returnWaarde = false;
     } else {
-        document.getElementById("aflever_voornaam").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Voornaam is niet ingevuld"
-        returnwaarde = false;
+        document.getElementById("aflever_aanhef").style.border = "1px solid lichtgrey";
     }
 
-    if(achternaam != ""){
-        returnWaarde = true;
+    if(voornaam.value == ""){
+        document.getElementById("aflever_voornaam").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Voornaam is niet ingevuld";
+        returnWaarde = false;
     } else {
+        document.getElementById("aflever_voornaam").style.border = "1px solid lichtgrey";
+    }
+
+    if(achternaam.value == ""){
         document.getElementById("aflever_achternaam").style.border= "1px solid red";
         document.getElementById("form-error").innerHTML += "<br>Aachternaam is niet ingevuld"
-        returnwaarde = false;
+        returnWaarde = false;
+    } else {
+        document.getElementById("aflever_achternaam").style.border = "1px solid lichtgrey";
     }
 
-    if(straat != ""){
-        returnWaarde = true;
+    if(straat.value == ""){
+         document.getElementById("aflever_straat").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Straatnaam is niet ingevuld";
+        returnWaarde = false;
     } else {
-        document.getElementById("aflever_straat").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Straatnaam is niet ingevuld"
-        returnwaarde = false;
+        document.getElementById("aflever_straat").style.border = "1px solid lichtgrey";
     }
 
-    if(huisnummer != ""){
-        returnWaarde = true;
-    } else {
+    if(huisnummer.value == ""){
         document.getElementById("aflever_huisnummer").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Huisnummer is niet ingevuld"
-        returnwaarde = false;
+        document.getElementById("form-error").innerHTML += "<br>Huisnummer is niet ingevuld";
+        returnWaarde = false;
+    } else {
+        document.getElementById("aflever_huisnummer").style.border = "1px solid lichtgrey";
     }
 
-    if(bedrijf != ""){
-        returnWaarde = true;
-    } else {
+    if(bedrijf.value == ""){
         document.getElementById("aflever_bedrijf").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Bedrijf is niet ingevuld"
-        returnwaarde = false;
+        document.getElementById("form-error").innerHTML += "<br>Bedrijf is niet ingevuld";
+        returnWaarde = false;
+    } else {
+        document.getElementById("aflever_bedrijf").style.border = "1px solid lichtgrey";
     }
 
-    if(postcode != ""){
-        returnWaarde = true;
-    } else {
+    if(postcode.value == ""){
         document.getElementById("aflever_postcode").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Postcode is niet ingevuld"
-        returnwaarde = false;
+        document.getElementById("form-error").innerHTML += "<br>Postcode is niet ingevuld";
+        returnWaarde = false;
+    } else {
+        document.getElementById("aflever_postcode").style.border = "1px solid lichtgrey";
     }
 
-    if(plaats != ""){
-        returnWaarde = true;
-    } else {
+    if(plaats.value == ""){
         document.getElementById("aflever_woonplaats").style.border= "1px solid red";
         document.getElementById("form-error").innerHTML += "<br>Plaats is niet ingevuld"
-        returnwaarde = false;  
+        returnWaarde = false;  
+    } else {
+        document.getElementById("aflever_woonplaats").style.border = "1px solid lichtgrey";
     }
 
-    // if(land != ""){
-    //     returnWaarde = true;
-    // } else {
-    //     document.getElementById("aflever_land").style.border= "1px solid red";
-    //     document.getElementById("form-error").innerHTML += "<br>Land is niet ingevuld"
-    //     returnwaarde = false;  
-    // }
-
-    if(emailadres != ""){
-        returnWaarde = true;
+    if(land.value == ""){
+        document.getElementById("aflever_land").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Land is niet ingevuld"
+        returnWaarde = false;  
     } else {
+        document.getElementById("aflever_land").style.border = "1px solid lichtgrey";
+    }
+
+    if(emailadres.value == ""){
         document.getElementById("email").style.border= "1px solid red";
         document.getElementById("form-error").innerHTML += "<br>Email is niet ingevuld"
-        returnwaarde = false;
+        returnWaarde = false;
+    } else {
+        document.getElementById("email").style.border = "1px solid lichtgrey";
     }
 
-    if(telefoon != ""){
-        returnWaarde = true;
-    } else {
+    if(telefoon.value == ""){
         document.getElementById("telefoon").style.border= "1px solid red";
         document.getElementById("form-error").innerHTML += "<br>Telefoonnummer is niet ingevuld"
-        returnwaarde = false;
+        returnWaarde = false;
+    } else {
+        document.getElementById("telefoon").style.border = "1px solid lichtgrey";
     }
 
-    if(algvw !=""){
-        returnWaarde = true;
+    if(algvw.checked){
+        document.getElementById("algvw").style.border = "1px solid lichtgrey";
+    } else {
         document.getElementById("algvw").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Ga accord met de algemene voorwaarde"
+        document.getElementById("form-error").innerHTML += "<br>Ga accord met de algemene voorwaarde";
+        returnWaarde = false;
     }
 
-
-
-    if(facatuureadres ="ja"){
-        
-    }
-
+    // if(returnWaarde === false){
+    //     document.getElementById("form_error").style.display = "block";
+    // } else {
+    //     document.getElementById("form_error").style.dysplay = "none";
+    // }
     
-return returnwaarde;
+    return returnWaarde;
 }
+
+
+// function facatuuradresjanee (){
+//     var facatuurja = document.getElementById("ja")
+//     var facatuurnee = document.getElementById("nee")
+
+//     if (facatuurja.value == ""){
+        
+//     }else {
+
+//     }
+// }
+    
+// function kopieer_gegevens(){
+//     var facatuur_aanhef = document.getElementById("facatuur_aanhef");
+
+
+//     if(facatuur_aanhef.value == ""){
+//         document.getElementById("facatuur_aanhef").style.border= "1px solid red"
+//         document.getElementById("form-error").innerHTML += "<br>Vul facatuur aanhef in";
+//         returnWaarde = false 
+//     } else {
+//         document.getElementById("facatuur_aanhef").style.border = "1px solid lichtgray"
+//     }
+// }
