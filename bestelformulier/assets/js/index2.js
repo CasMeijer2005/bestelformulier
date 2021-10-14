@@ -110,9 +110,86 @@ function verstuur(){
         document.getElementById("algvw").style.border = "1px solid lichtgrey";
     } else {
         document.getElementById("algvw").style.border= "1px solid red";
-        document.getElementById("form-error").innerHTML += "<br>Ga accord met de algemene voorwaarde";
+        document.getElementById("form-error").innerHTML += "<br>Ga akkoord met de algemene voorwaarde";
         returnWaarde = false;
     }
+    var radio = document.getElementById("factuuradres_ja").checked;
+    if (!radio){
+    document.getElementById("aflever_aanhef").value = aanhef;
+    document.getElementById("aflever_voornaam").value = voornaam;
+    document.getElementById("aflever_achternaam").value = achternaam;
+    document.getElementById("aflever_straat").value = straat;
+    document.getElementById("aflever_huisnummer").value = huisnummer;
+    document.getElementById("aflever_bedrijf").value = bedrijf;
+    document.getElementById("aflever_postcode").value = postcode;
+    document.getElementById("aflever_woonplaats").value = plaats;
+    document.getElementById("aflever_land").value = land;
+    }
+    
+    var factuurVoornaam = document.getElementById("factuur_voornaam").value;
+    var factuurachternaam = document.getElementById("factuur_achternaam").value;
+    var factuurstraatnaam = document.getElementById("factuur_straat").value;
+    var factuurhuisnummer = document.getElementById("factuur_huisnummer").value;
+    var factuurpostcode = document.getElementById("factuur_postcode").value;
+    var factuurwoonplaats = document.getElementById("factuur_woonplaats").value;
+    var factuurland = document.getElementById("factuur_land").value;
+
+    if (factuurVoornaam == "") {  
+        document.getElementById("factuur_voornaam").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur voornaam niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurachternaam == "") {  
+        document.getElementById("factuur_achternaam").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur achternaam niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurstraatnaam == "") {  
+        document.getElementById("factuur_straat").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur straat niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurhuisnummer == "") {  
+        document.getElementById("factuur_huisnummer").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur huisnummer niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurpostcode == "") {  
+        document.getElementById("factuur_postcode").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur postcode niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurwoonplaats == "") {  
+        document.getElementById("factuur_woonplaats").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur woonplaats niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
+    if (factuurland == "") {  
+        document.getElementById("factuur_land").style.border= "1px solid red";
+        document.getElementById("form-error").innerHTML += "<br>Facatuur land niet ingevuld";
+        returnWaarde = false;
+    } else {
+         returnWaarde = true;
+    }
+
 
     // if(returnWaarde === false){
     //     document.getElementById("form_error").style.display = "block";

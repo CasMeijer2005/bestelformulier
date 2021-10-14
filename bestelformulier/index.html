@@ -20,7 +20,7 @@
                         <div class="col-xs-12 order-titel">
                             <h2>Afleveradres</h2>
                         </div>
-                        <form action="verzenden.php" onsubmit="return verstuur()" method="post" enctype="multipart/form-data" class="form-order">
+                        <form action="index.html" onsubmit="return verstuur()" method="post" enctype="multipart/form-data" class="form-order">
                             <input type="hidden" name="do" value="formorder" />
                             <div class="afleveradres" id="afleveradres">
                                 <div class="form-group">
@@ -131,10 +131,10 @@
                                     <h2 class="col-xs-12 col-sm-12">Heeft u een ander factuur adres?</h2>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 factuur-form pull-right">
                                         <label >
-                                            <input type="radio" id="ja" name="factuuradres" value="ja" class="" checked/><span class="text m-l-xs">Ja (dan moet u het onderstaande invullen)</span>
+                                            <input type="radio" id="factuuradres_ja" name="factuuradres" value="ja" class="" checked/><span class="text m-l-xs">Ja (dan moet u het onderstaande invullen)</span>
                                         </label>
                                         <label >
-                                            <input type="radio" id="nee" name="factuuradres" value="nee" class="" /><span class="text m-l-xs">Nee (dan kopieëren wij de bovenstaande gegevens voor u)</span>
+                                            <input type="radio" id="facatuuradres_nee" name="factuuradres" value="nee" class="" /><span class="text m-l-xs">Nee (dan kopieëren wij de bovenstaande gegevens voor u)</span>
                                         </label>
                                     </div>
                                 </div>
@@ -233,6 +233,6 @@
             </div>
         </div>
     </div>
-<script src="assets/js/index.js"></script>
+<script src="assets/js/index2.js"></script>
 </body>
 </html>
